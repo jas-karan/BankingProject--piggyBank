@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Piggy Bank- Login</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+	
+	
+	#header{
+	    padding-bottom:40px;
+	    padding-top:50px;
+		background: url("head.jpg");
+		background-size: 100% 200px;
+		font-size: 50px;
+		text-align:right;
+		font-family: 'Inconsolata', monospace;
+		
+		padding-right:30px;
+		text-decoration:underline;
+		letter-spacing:10px;
+		color: white;
+		margin-bottom: 50px;
+	}
+	
+	#header2{
+		color:white;
+		padding-left:200px;
+		
+	}
+	#about{
+		color:white;
+	background-color: #4d774e;
+	padding:10px;
+	}
+	img{
+		width:200px;
+	}
+	#outer{
+		background-color: #4d774e;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	#head{
+		text-align:center;
+		width:100%;
+		color: white;
+	}
+	#inner{
+		padding: 40px;
+		border:none;
+		background-color: white;
+		margin: 30px;
+		margin-top: 20px;
+	}
+	
+	body{
+		margin:50px;
+		background-color: #164a41;
+	}
+	label{
+		color: black;
+		font-family: 'Roboto Mono', monospace;
+	}
+	input {
+			 border: none;
+ 			 background-color : #d1d1d1; 
+			}
+	a{
+		text-decoration: none;
+		color:white;
+		
+	}
+	a:visited{
+		color:white;
+	}
+</style>
+</head>
+<body>
+	<table id="main_table">
+		<tr>
+			<th id="header" colspan="2" >
+				Piggy Bank
+			</th>
+		</tr>
+		<tr></tr>
+		<tr></tr>
+		
+		<tr>
+			<td>
+					<table id="outer">
+						
+						<tr>
+							
+								<td>
+									<div id="head">Customer Login</div>
+									<div style="color:#bd2717; text-align:center; font-family: 'Roboto Mono', monospace;">Invalid Username or Password!</div>
+									<form action="dologin.jsp" method="post">
+										<table  id="inner">
+										<tr><td>
+											<label for="username">Username: </label>
+											<input type="text" name="username" required id="username" placeholder="Eg. John">
+										</td></tr>	
+										
+										<tr>
+										<td>
+											<label for="password">Password: </label>
+											<input type="password" required name="password">
+										</td>
+										</tr>
+										<tr>
+											<td>
+											<input style="background-color: #4d774e; color: white; font-size: 15px; border:none" type="submit" value="Login">
+											</td>
+										</tr>
+										</table></form>
+								</td>
+							
+						</tr>
+						
+					
+						<tr>
+							<td style="text-align:center;"><a href="acc.jsp">New User? Register Here </a></td>
+						</tr>
+						</table>
+				
+				
+			</td>
+			
+			<th id="about">
+				<p>The central concept of the application is to allow the  customer(s) to service virtually using the Internet with out going to bank and 
+				 allow customers to open new account, withdraw, deposit,  close and  getting balance using this banking service.&nbsp; 
+				  The information pertaining to the customers stores on an RDBMS at the  server side (BANK).&nbsp;
+				   The Bank services  the customers according to the customer&rsquo;s intention and it updates and backups  of each customer transaction accordingly
+				 .</p>
+			</th>
+		</tr>
+	</table>
+</body>
+</html>
