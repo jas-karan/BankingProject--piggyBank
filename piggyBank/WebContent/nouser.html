@@ -2,6 +2,160 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Piggy Bank- Login</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+
+<style>
+	html {
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+	}
+	body {
+    background-color: #164a41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	}
+	.table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+
+	}
+	.header{
+	 	background: url("head.jpg");
+		font-size: 50px;
+		font-family: 'Inconsolata', monospace;
+		text-decoration:underline;
+		letter-spacing:10px;
+		color: white;
+		padding: 15px 15px;
+		background-size: 100% 200px;
+	}
+	.header2{
+		background-color: white;
+		border-radius: 10px;
+		padding: 15px 25px;
+		display:flex;
+		flex-direction:column;
+
+	}
+	.header21{
+		margin: 12px;
+	}
+
+	.form{
+		padding: 20px;
+		border: 1px solid black;
+
+	}
+	input {
+			 border: none;
+ 			 background-color : #d1d1d1;
+			 margin:12px 0;
+			 padding: 10px 2px;
+			 width:70%;
+			}
+	.form-button {
+			border: 1px solid black;
+			color: black;
+			display: block;
+			border-radius: 10px;
+			padding: 5px 15px;
+			text-decoration: none;
+			margin:auto;
+			}
+	a.form-button{
+			margin-top:10px;
+			background-color : #d1d1d1;
+			width:62.5%;
+			}
+	label{
+			display:block;
+			}
+	.header21:last-child{
+			padding:30px;
+			color:white;
+			background-color: #4d774e;
+			margin-left:0;
+			margin-right:0;
+			}
+			.form-button:hover,
+		.form-button:focus {
+		    background-color: #4d774e;
+		}
+	footer{
+			border:1px solid black;
+			padding:20px;
+			background: url("head.jpg");
+		  color:white;
+			background-size: 100% 200px;
+			}
+	@media (min-width:900px) {
+    .header2 {
+        flex-direction: row;
+    }
+		.header21{
+			width:50%;
+		}
+
+}
+</style>
+</head>
+<body>
+	<div class="table">
+		<div class="header">
+			Piggy Bank
+		</div>
+		<div class="header2">
+			
+			<div class="header21 form">
+					<div style="color:#bd2717; text-align:center; font-family: 'Roboto Mono', monospace;">Invalid Username or Password!</div>
+					<h2>Customer login</h2>
+					<form action="dologin.jsp" method="post">
+						<label for="username">Username: </label>
+						<input type="text" name="username" required id="username" placeholder="Eg. John">
+						<label for="password">Password: </label>
+						<input type="password" required name="password">
+						<input type="submit" value="Login" class="form-button">
+					</form>
+					<a href="acc.jsp" class="form-button">New User? Register Here </a>
+			</div>
+
+			<div class="header21">
+				The central concept of the application is to allow the  customer(s) to service virtually using the Internet with out going to bank and
+				 allow customers to open new account, withdraw, deposit,  close and  getting balance using this banking service.&nbsp;
+				  The information pertaining to the customers stores on an RDBMS at the  server side (BANK).&nbsp;
+				   The Bank services  the customers according to the customer&rsquo;s intention and it updates and backups  of each customer transaction accordingly
+			</div>
+
+		</div>
+		<footer>
+			All rights Reserved @piggybank
+		</footer>
+	</div>
+
+
+
+	
+</body>
+</html>
+
+
+<!--  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
 <title>Piggy Bank- Login</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
@@ -139,4 +293,4 @@
 		</tr>
 	</table>
 </body>
-</html>
+</html>-->

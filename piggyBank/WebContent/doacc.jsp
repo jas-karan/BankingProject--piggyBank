@@ -25,135 +25,102 @@ int update = commonClass.update(sql);
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Piggy Bank</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
 <style>
-	#header{
-	    padding-bottom:40px;
-	    padding-top:50px;
-		background: url("head.jpg");
-		background-size: 100% 200px;
-		font-size: 50px;
-		text-align:right;
-		font-family: 'Inconsolata', monospace;
-		
-		padding-right:30px;
-		text-decoration:underline;
-		letter-spacing:10px;
-		color: white;
-		margin-bottom: 50px;
+	html {
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
 	}
-	
-	#header2{
-		color:white;
-		padding-left:200px;
-		
+	body {
+    background-color: #164a41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 	}
-	#about{
-		color:white;
-	background-color: #4d774e;
+	.table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+
 	}
-	img{
-		width:200px;
-	}
-	#outer{
-		background-color: #4d774e;
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-	#head{
-		
-		width:100%;
-		color: white;
-	}
-	#inner{
-		padding: 40px;
-		border:none;
-		background-color: white;
-		margin-left: 40px;
-	}
-	
-	body{
-		margin:50px;
-		background-color: #164a41;
-	}
-	label{
-		color: black;
-		
-	}
-	input {
-			 border: none;
- 			 background-color : #d1d1d1; 
+	header2{
+		padding: 20px;
+		}
+	.form-button {
+			border: 1px solid black;
+			color: black;
+			
+			border-radius: 10px;
+			padding: 3px;
+			text-decoration: none;
+			margin:auto;
 			}
-	a{
-		text-decoration: underline;
-		color:white;
-	}
-	a:visited{
-		color:white;
-	}
-	#op{
-		
-		padding-right: 30px;
-		padding-left: 30px;
-		background-color: #4d774e;
-	}
+	a.form-button{
+			margin-top:10px;
+			background-color : #d1d1d1;
+			width:62.5%;
 	
-	li{
-		list-style-type: none;
-		font-size:15px;
-		padding-right: 30px;
-		padding-left: 10px;
-		background-color: #376C39;
-		margin: 5px;
-		font-family: 'Roboto Mono', monospace;
-	}
-	#resp{
-		width: 40%;
-		background-color: #4d774e;
-		color: white;
-		padding: 100px;
-	}
+			.form-button:hover,
+		.form-button:focus {
+		    background-color: #4d774e;
+		}
+	footer{
+			border:1px solid black;
+			padding:20px;
+			background: url("head.jpg");
+		  color:white;
+			background-size: 100% 200px;
+			}
+	a.form-button:hover,
+		a.form-button:focus {
+		    background-color: #4d774e;
+		}
+	@media (min-width:900px) {
+    .header2 {
+        flex-direction: row;
+    }
+		.header21{
+			width:50%;
+		}
+
+}
 </style>
 	
 	
 </head>
 <body>
-	<table style="width:100%">
-		<tr>
-			<th id="header" colspan="2" >
-				Piggy Bank
-			</th>
-		</tr>
+	
+	<div class="table">
 		
-		<tr></tr>
-		<tr></tr>
-		<tr  style="text-align:center">
-			<td id="resp">
-				
-					<p>
+		<div class="header2">
 					<% 
 							if(update == 1){
 					%>
-							Registered Successfully.<br/><a href="start.html">Click Here</a> to Login and Activate Your Account.
+							Registered Successfully!.</br></br></br><a href="start.html" class="form-button">Click Here</a> to Login and Activate Your Account.
 					<%
 							}else {
 						%>
-							Sorry!. Account is not created.<br/>Click Here to <a href="acc.jsp">Register Again</a>
+							Sorry!. Account is not created.<br/></br></br>Click Here to <a href="acc.jsp" class="form-button">Register Again</a>
 						<%
 							}
 						 %>
-					</p>
-			</td>
-			<th id="about">
-				<p>The central concept of the application is to allow the  customer(s) to service virtually using the Internet with out going to bank and 
-				 allow customers to open new account, withdraw, deposit,  close and  getting balance using this banking service.&nbsp; 
-				  The information pertaining to the customers stores on an RDBMS at the  server side (BANK).&nbsp;
-				   The Bank services  the customers according to the customer&rsquo;s intention and it updates and backups  of each customer transaction accordingly
-				 .</p>
-			</th>
-		</tr>
-	</table>
+			
+			
+		</div>
+		
+	</div>
+
+	
 </body>
 </html>

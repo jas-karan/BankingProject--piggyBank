@@ -4,65 +4,65 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Piggy Bank</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-	#header{
-	    padding-bottom:40px;
-	    padding-top:50px;
-		background: url("head.jpg");
-		background-size: 100% 200px;
+	html {
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+	}
+	body {
+    background-color: #164a41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	}
+	.table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+	align-items:center;
+	}
+	.header{
+	 	background: url("head.jpg");
 		font-size: 50px;
-		text-align:right;
 		font-family: 'Inconsolata', monospace;
-		
-		padding-right:30px;
 		text-decoration:underline;
 		letter-spacing:10px;
 		color: white;
-		margin-bottom: 50px;
-	}
-	
-	#header2{
-		color:white;
-		padding-left:200px;
-		
-	}
-	#about{
-		color:white;
-	background-color: #4d774e;
-	padding:10px;
-	}
-	img{
-		width:200px;
-	}
-	#outer{
-		background-color: #4d774e;
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-	#head{
-		
+		padding: 15px 15px;
+		background-size: 100% 200px;
 		width:100%;
-		color: white;
-	}
-	#inner{
-		padding: 40px;
-		border:none;
-		background-color: white;
 	}
 	
-	body{
-		margin:50px;
-		background-color: #164a41;
+	.header21{
+		margin: 12px;
+		text-align:center;
 	}
-	label{
-		color: black;
+	li{
+		list-style-type: none;
+		font-size:25px;
+		margin-top: 5px;
 	}
-	input {
-			 border: none;
- 			 background-color : #d1d1d1; 
+	
+	
+	.form-button {
+			border: 1px solid black;
+			color: black;
+			display: block;
+			border-radius: 10px;
+			padding: 5px 15px;
+			text-decoration: none;
+			margin:auto;
 			}
 	a{
 		text-decoration: none;
@@ -70,68 +70,58 @@
 		font-size:15px;
 		font-family: 'Roboto Mono', monospace;
 	}
-	a:visited{
-		color:white;
-	}
-	#op{
-		
-		padding-right: 60px;
-		padding-left: 60px;
-		background-color: #4d774e;
-	}
+	a.form-button{
+			margin-top:10px;
+			background-color : #d1d1d1;
+			width:62.5%;
+			}
 	
-	li{
-		list-style-type: none;
-		font-size:15px;
-		padding-right: 30px;
-		padding-left: 10px;
-		background-color: #376C39;
-		margin: 5px;
-	}
+	.form-button:hover,
+		.form-button:focus {
+		    background-color: #4d774e;
+		}
+	footer{
+			border:1px solid black;
+			padding:20px;
+			background: url("head.jpg");
+		  color:white;
+			background-size: 100% 200px;
+			width:100%;
+			}
+	@media (min-width:900px) {
+    .header2 {
+        flex-direction: row;
+    }
+		.header21{
+			width:50%;
+		}
+
+}
 </style>
+
 </head>
 <body>
-	<table>
-		<tr>
-			<th id="header" colspan="2" >
+	<div class="table">
+			<div class="header">
 				Piggy Bank
-			</th>
-		</tr>
-		
-		<tr>
-		</tr>
-		<tr></tr>
-		
-		<tr>
-			<td id="op">
-				<div>
- 				 	<div style="padding-left:50px" id="head">Account Operations</div>
- 						 <ul>
-    						<li><a href="main.jsp">Welcome,&nbsp;<%= session.getAttribute("cust_name") %></a></li>
- 				    		<li><a href="account.jsp">Create Account</a></li>
-							<li><a href="deposit.jsp">Deposit</a></li>
-  						    <li><a href="withdraw.jsp">Do Withdraw</a></li>
-  							<li><a href="getbalance.jsp">Get Balance</a></li>
-							<li><a href="transfer.jsp">Transfer Amount</a></li>
-							<li><a href="viewreports.jsp">View Report</a></li>
-							<li><a href="logout.jsp">LogOut</a></li>
- 						 </ul>
- 					 <div>&nbsp;</div>
-				</div>
-				
-			</td>
-			
-			<th id="about">
-				<p>The central concept of the application is to allow the  customer(s) to service virtually using the Internet with out going to bank and 
-				 allow customers to open new account, withdraw, deposit,  close and  getting balance using this banking service.&nbsp; 
-				  The information pertaining to the customers stores on an RDBMS at the  server side (BANK).&nbsp;
-				   The Bank services  the customers according to the customer&rsquo;s intention and it updates and backups  of each customer transaction accordingly
-				 .</p>
-			</th>
-		</tr>
-	</table>
-
-
-
+			</div>
+			<div class="header21 ">
+					<h2>Account Operations</h2>
+ 					<ul>
+    					<li><a href="main.jsp" class="form-button" >Welcome,&nbsp;<%= session.getAttribute("cust_name") %></a></li>
+ 			    		<li><a href="account.jsp" class="form-button" >Create Account</a></li>
+						<li><a href="deposit.jsp" class="form-button" >Deposit</a></li>
+  					    <li><a href="withdraw.jsp" class="form-button" >Do Withdraw</a></li>
+  						<li><a href="getbalance.jsp" class="form-button" >Get Balance</a></li>
+						<li><a href="transfer.jsp" class="form-button" >Transfer Amount</a></li>
+						<li><a href="viewreports.jsp" class="form-button" >View Report</a></li>
+						<li><a href="logout.jsp" class="form-button" >LogOut</a></li>
+ 		    	   </ul>
+			</div>
+		<footer>
+			All rights Reserved @piggybank
+		</footer>
+	</div>
+	
 </body>
 </html>

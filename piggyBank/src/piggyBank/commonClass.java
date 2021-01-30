@@ -9,7 +9,7 @@ public class commonClass {
 		Connection c = null;
 		try {
 	    	Class.forName("com.mysql.cj.jdbc.Driver");
-	    	c = DriverManager.getConnection("jdbc:mysql://localhost/piggybank","root","password");
+	    	c = DriverManager.getConnection("jdbc:mysql://localhost/piggybank","root","yourPasswordHere");
 	    	
 		}
 		catch (Exception ex) {

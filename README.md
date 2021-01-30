@@ -49,3 +49,5 @@ details into database and Displays suitable message if money is
 deposited or not and current balance in account.
 » and again, same way rest all the things are connected
 and created
+
+***Don't forget to change your mySQL server password in commonClass.java file in src folder***

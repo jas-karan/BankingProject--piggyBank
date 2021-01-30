@@ -4,135 +4,88 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Piggy Bank</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-	#header{
-	    padding-bottom:40px;
-	    padding-top:50px;
-		background: url("head.jpg");
-		background-size: 100% 200px;
-		font-size: 50px;
-		text-align:right;
-		font-family: 'Inconsolata', monospace;
-		
-		padding-right:30px;
-		text-decoration:underline;
-		letter-spacing:10px;
-		color: white;
-		margin-bottom: 50px;
+	html {
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
 	}
-	
-	#header2{
-		color:white;
-		padding-left:200px;
-		
+	body {
+    background-color: #164a41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 	}
-	#about{
-		color:white;
-	background-color: #4d774e;
-	margin-left: 300px;
+	.table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+
 	}
-	img{
-		width:200px;
-	}
-	#outer{
-		background-color: #4d774e;
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-	#head{
-		
-		width:100%;
-		color: white;
-	}
-	#inner{
-		padding: 40px;
-		border:none;
-		background-color: white;
-		margin-left: 40px;
-	}
-	
-	body{
-		margin:50px;
-		background-color: #164a41;
-	}
-	label{
-		color: black;
-		
-	}
-	input {
-			 border: none;
- 			 background-color : #d1d1d1; 
+	header2{
+		padding: 20px;
+		}
+	.form-button {
+			border: 1px solid black;
+			color: black;
+			
+			border-radius: 10px;
+			padding: 3px;
+			text-decoration: none;
+			margin:auto;
 			}
-	a{
-		text-decoration: none;
-		color:white;
-	}
-	a:visited{
-		color:white;
-	}
-	#op{
-		
-		padding-right: 30px;
-		padding-left: 30px;
-		background-color: #4d774e;
-	}
-	
-	li{
-		list-style-type: none;
-		font-size:15px;
-		padding-right: 30px;
-		padding-left: 10px;
-		background-color: #376C39;
-		margin: 5px;
-		font-family: 'Roboto Mono', monospace;
-	}
-	#accNo{
-		font-size: 20px;
-	}
+	a.form-button{
+			margin-top:10px;
+			background-color : #d1d1d1;
+			width:62.5%;
+		}
+		span{
+			font-weight: bold;
+		}
+	footer{
+			border:1px solid black;
+			padding:20px;
+			background: url("head.jpg");
+		  color:white;
+			background-size: 100% 200px;
+			}
+	a.form-button:hover,
+		a.form-button:focus {
+		    background-color: #4d774e;
+		}
+	@media (min-width:900px) {
+    .header2 {
+        flex-direction: row;
+    }
+	.header21{
+		width:50%;
+		}
+
+}
 </style>
+	
 </head>
 <body>
-	<table style="width:100%">
-		<tr>
-			<th id="header" colspan="2" >
-				Piggy Bank
-			</th>
-		</tr>
+	<div class="table">
 		
-		<tr>	</tr>
-		<tr></tr>
-		<tr>
-			<td id="op">
-				<div>
- 				 	<div style="padding-left:50px" id="head">Account Operations</div>
- 						 <ul>
-    						<li><a href="main.jsp">Welcome,&nbsp;<%= session.getAttribute("cust_name") %></a></li>
- 				    		<li><a href="account.jsp">Create Account</a></li>
-							<li><a href="deposit.jsp">Deposit</a></li>
-  						    <li><a href="withdraw.jsp">Do Withdraw</a></li>
-  							<li><a href="getbalance.jsp">Get Balance</a></li>
-							<li><a href="transfer.jsp">Transfer Amount</a></li>
-							<li><a href="viewreports.jsp">View Report</a></li>
-							<li><a href="logout.jsp">LogOut</a></li>
- 						 </ul>
- 					 <div>&nbsp;</div>
-				</div>
-				
-			</td>
-			
-			<th id="about">
-				<div>
+		<div class="header2">
 					There is No Account in bank for this User.<br/>
-					To Create an Account, <a href="account.jsp">Click Here</a>
-				</div>
-			</th>
-		</tr>
-	</table>
-
-
+					To Create an Account, <br/><br/><a href="account.jsp" class="form-button">Click Here</a></br></br>
+					<a href="main.jsp" class="form-button">Main Page</a>
+		</div>
+		
+	</div>
 
 </body>
+
 </html>
